@@ -1,0 +1,31 @@
+version: '3.7'
+
+services:
+  ozguven_website:
+    build:
+      context: .
+    volumes:
+      - static_data:/vol/web
+    environment:
+      - SECRET_KEY=confidence99
+      - ALLOWED_HOSTS=127.0.0.1,localhost
+
+  proxy:
+    build:
+      context: ./proxy
+    volumes:
+      - static_data:/vol/static
+    ports:
+      - "8080:8080"
+    depends_on:
+      - ozguven_website
+  
+  db:
+    image: alpine
+    command: sh -c 'while :; do sleep 10; done'
+    volumes:
+      - sqlite_data:/data/db
+
+volumes:
+  sqlite_data:
+  static_data:
