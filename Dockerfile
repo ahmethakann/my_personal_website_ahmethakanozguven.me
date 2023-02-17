@@ -15,7 +15,7 @@ COPY ./scripts /scripts
 
 RUN chmod +x /scripts/*
 
-RUN mkdir -p /vol/web/mediafiles
+RUN mkdir -p /vol/web/media
 RUN mkdir -p /vol/web/static
 
 RUN adduser -D user

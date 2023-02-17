@@ -20,12 +20,6 @@ services:
     depends_on:
       - ozguven_website
   
-  db:
-    image: alpine
-    command: sh -c 'while :; do sleep 10; done'
-    volumes:
-      - sqlite_data:/data/db
 
 volumes:
-  sqlite_data:
   static_data:
