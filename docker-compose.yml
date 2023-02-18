@@ -23,4 +23,4 @@ services:
 
 
 volumes:
-  static_files:
+  staticfiles:
