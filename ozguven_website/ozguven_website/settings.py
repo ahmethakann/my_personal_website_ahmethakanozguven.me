@@ -19,8 +19,8 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = "django-insecure-v8bzoj5)*&_%x-yy7o*z-2$*m1uuo*hbtb(n)%@bboej@%wkox"
-DEBUG = int(os.environ.get('DEBUG', default=1))
-ALLOWED_HOSTS = []
+DEBUG = 0
+ALLOWED_HOSTS = ["ahmethakanozguven.me", "www.ahmethakanozguven.me", "127.0.0.1", "localhost"]
 #os.environ.get('ALLOWED_HOSTS').split(",")
 
 
